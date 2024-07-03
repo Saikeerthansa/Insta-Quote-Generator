@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Quote & Hashtag Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Instagram Quote & Hashtag Generator</h1>
+        <form method="post">
+            <label for="input_text">Enter your Text:</label>
+            <textarea name="input_text" id="input_text" cols="50" rows="4"></textarea>
+            <button type="submit">Generate</button>
+        </form>
+
+        {% if description %}
+        <div class="result">
+            <h2>Generated Description</h2>
+            <pre>{{ description }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
